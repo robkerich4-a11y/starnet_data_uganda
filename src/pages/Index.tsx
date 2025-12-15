@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Wifi, Zap, Shield } from "lucide-react";
+import { Wifi, Zap, Shield, Mail } from "lucide-react";
 import { useState } from "react";
 import { PaymentModal } from "@/components/PaymentModal";
 
@@ -56,7 +56,7 @@ const Index = () => {
             <h1 className="mb-2 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
               Starnet{" "}
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Uganda
+                Data Uganda
               </span>
             </h1>
             <p className="mx-auto mb-2 max-w-md text-base text-muted-foreground md:text-lg">
@@ -120,7 +120,7 @@ const Index = () => {
                     <span className="text-xl font-extrabold text-primary">
                       {pkg.price}
                     </span>
-                    <span className="text-xs text-muted-foreground">Ugx</span>
+                    <span className="text-xs text-muted-foreground">UGX</span>
                   </div>
                   <div className="mt-0.5 inline-block rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 px-2 py-0.5 text-xs font-semibold text-foreground">
                     {pkg.data}
@@ -152,20 +152,30 @@ const Index = () => {
       />
 
       {/* Footer */}
-      <footer className="border-t border-border bg-card/40 py-2">
-        <div className="container mx-auto px-3 text-center space-y-1">
+      <footer className="border-t border-border bg-card/40 py-3">
+        <div className="container mx-auto px-3 text-center space-y-2">
           <p className="text-xs text-muted-foreground">
-            © 2025 Starnet Uganda. All rights reserved.
+            © 2025 Starnet Data Uganda. All rights reserved.
           </p>
 
-          {/* UPDATED WHATSAPP BUTTON */}
-          <a
-            href="https://wa.me/256774095423?text=Hello%20Starnet%20Uganda%2C%20I%20need%20more%20information%20about%20your%20internet%20packages."
-            target="_blank"
-            className="inline-block bg-primary text-primary-foreground px-3 py-1.5 rounded-md shadow hover:bg-primary/90 transition text-[11px] font-medium"
-          >
-            Contact Us on WhatsApp
-          </a>
+          {/* Contact Buttons */}
+          <div className="flex justify-center gap-2 flex-wrap">
+            <a
+              href="https://wa.me/256774095423?text=Hello%20Starnet%20Data%20Uganda%2C%20I%20need%20more%20information%20about%20your%20internet%20packages."
+              target="_blank"
+              className="inline-block bg-primary text-primary-foreground px-3 py-1.5 rounded-md shadow hover:bg-primary/90 transition text-[11px] font-medium"
+            >
+              WhatsApp Us
+            </a>
+
+            <a
+              href="mailto:starnetuganda1@gmail.com"
+              className="inline-flex items-center gap-1 bg-secondary text-secondary-foreground px-3 py-1.5 rounded-md shadow hover:bg-secondary/90 transition text-[11px] font-medium"
+            >
+              <Mail className="h-3 w-3" />
+              Email Us
+            </a>
+          </div>
         </div>
       </footer>
     </div>
